@@ -22,3 +22,4 @@ bin-debug/
 javascripts_compress/
 context.xml
 nb-configuration.xml
+gen/
