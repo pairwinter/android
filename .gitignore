@@ -21,4 +21,5 @@ bin-debug/
 # intellj folders #
 gen/
 libs/
+test/out
 
