@@ -22,4 +22,5 @@ bin-debug/
 gen/
 libs/
 test/out
+out/
 
