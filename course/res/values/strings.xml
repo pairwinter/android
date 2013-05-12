@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">course</string>
+    <string name="hello">Hello World !</string>
+    <string name="button">Button</string>
+    <string name="forward">Forward</string>
+    <string name="activity2_title">Here is Activity2</string>
+    <string name="back">Back</string>
+</resources>
