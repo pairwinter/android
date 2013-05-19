@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@+id/calculator_tv_first_name" android:layout_width="70dp" android:layout_height="wrap_content" android:text="@string/calculator_tv_first_name" android:gravity="right" />
+        <EditText android:id="@+id/calculator_et_first_value_id" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@+id/calculator_tv_second_name" android:layout_width="70dp" android:layout_height="wrap_content" android:text="@string/calculator_tv_second_name" android:gravity="right" />
+        <EditText android:id="@+id/calculator_et_second_value_id" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@+id/calculator_tv_operator" android:layout_width="70dp" android:layout_height="wrap_content" android:text="@string/calculator_tv_operator" android:gravity="right" android:layout_gravity="center" />
+        <Spinner  android:id="@+id/calculator_spinner_operator" android:entries="@array/calculator_spinner_operator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:spinnerMode="dropdown"/>
+    </LinearLayout>
+    <Button android:id="@+id/calculator_button_run" android:text="@string/calculator_button_run" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

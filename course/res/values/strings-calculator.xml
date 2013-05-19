@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_tv_first_name">First:</string>
+    <string name="calculator_tv_second_name">Second:</string>
+    <string name="calculator_tv_operator">Operator:</string>
+    <string name="calculator_button_run">Run</string>
+    <string name="calculator_textview_result">Result</string>
+    <string-array name="calculator_spinner_operator">
+        <item>+</item>
+        <item>-</item>
+        <item>*</item>
+        <item>÷</item>
+    </string-array>
+</resources>

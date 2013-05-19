@@ -13,5 +13,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity2" android:label="@string/activity2_title"/>
+        <activity android:name=".calculator.CalculatorActivity" android:label="@string/calculator_activity_title"/>
+        <activity android:name=".calculator.ResultActivity" android:label="@string/calculator_result_activity_title"/>
     </application>
 </manifest>

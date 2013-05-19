@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
     <TextView android:id="@+id/textView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello" />
-    <Button android:id="@+id/button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/button"/>
-    <Button android:id="@+id/forward" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forward"/>
+    <Button android:id="@+id/button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button" android:layout_gravity="left|center_vertical" android:singleLine="false" android:layout_column="0" />
+    <Button android:id="@+id/forward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forward" android:layout_gravity="center" android:layout_column="1" />
+    <Button android:id="@+id/forward_to_send_sms" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forward_to_send_msm" />
+    <Button android:id="@+id/forward_to_calculator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forward_to_calculator" />
 </LinearLayout>
 

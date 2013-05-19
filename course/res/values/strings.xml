@@ -6,4 +6,11 @@
     <string name="forward">Forward</string>
     <string name="activity2_title">Here is Activity2</string>
     <string name="back">Back</string>
+    <string name="forward_to_send_msm">Send MSM</string>
+    <string name="invalid_dialog_title">Valid Failed</string>
+    <string name="ok">OK</string>
+    <string name="invalid_field">The value of {0} is invalid,please type into again.</string>
+    <string name="forward_to_calculator">Calculator</string>
+    <string name="calculator_activity_title">My Calculator</string>
+    <string name="calculator_result_activity_title">Calculator Result</string>
 </resources>
