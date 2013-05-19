@@ -43,6 +43,7 @@ public class CalculatorActivity extends Activity {
         operateSpinner = (Spinner)findViewById(R.id.calculator_spinner_operator);
         operateSpinner.setSelection(0,true);
         runButton = (Button)findViewById(R.id.calculator_button_run);
+        operateSpinner.setOnItemSelectedListener(new OperatorSpinnerChangeListener());
         runButton.setOnClickListener(new RunButtonClickListener());
     }
 
