@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-    <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_gravity="center_vertical" android:stretchColumns="4" android:background="#fefff3" android:shrinkColumns="0,1,2,3">
+    <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:background="#fefff3" android:shrinkColumns="0,1,2,3">
         <TableRow android:layout_width="fill_parent" android:layout_height="30dp" android:padding="5dp">
             <TextView style="@style/calculator_result_table_textview" android:text="First Value" android:textColor="#371c40"/>
             <TextView style="@style/calculator_result_table_textview" android:text="Second Value" android:textColor="#371c40"/>
@@ -8,7 +8,7 @@
             <TextView style="@style/calculator_result_table_textview" android:text="Result" android:textColor="#371c40"/>
         </TableRow>
         <TableRow android:layout_width="fill_parent">
-            <View android:layout_height="5dip" android:background="#F00" android:layout_width="fill_parent" android:layout_span="5" android:padding="5dp"></View>
+            <View android:layout_height="5dip" android:background="#F00" android:layout_width="fill_parent" android:layout_span="4" android:padding="5dp"></View>
         </TableRow>
         <TableRow android:layout_width="fill_parent" android:layout_height="30dp" android:padding="5dp">
             <TextView style="@style/calculator_result_table_textview" android:text="First Value" android:id="@+id/calculator_result_firstValue" android:textColor="#371c40"/>
@@ -17,4 +17,5 @@
             <TextView style="@style/calculator_result_table_textview" android:text="Result" android:id="@+id/calculator_result" android:textColor="#371c40"/>
         </TableRow>
     </TableLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_relative"/>
 </LinearLayout>

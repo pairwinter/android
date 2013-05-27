@@ -15,5 +15,6 @@
         <activity android:name=".Activity2" android:label="@string/activity2_title"/>
         <activity android:name=".calculator.CalculatorActivity" android:label="@string/calculator_activity_title"/>
         <activity android:name=".calculator.ResultActivity" android:label="@string/calculator_result_activity_title"/>
+        <activity android:name=".LayoutTest" android:label="@string/layout_test"/>
     </application>
 </manifest>

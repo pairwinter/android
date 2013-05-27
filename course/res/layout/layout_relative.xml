@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@+id/relativeInputArea" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/relativeTextView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Type Into" android:textSize="18dp" android:gravity="center"/>
+        <EditText android:id="@+id/relativeEditText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Please type into" android:layout_toRightOf="@id/relativeTextView"/>
+    </LinearLayout>
+    <Button android:id="@+id/relativeOk" android:text="OK" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_below="@id/relativeInputArea"/>
+    <Button android:id="@+id/relativeCancel" android:text="Cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/relativeOk" android:layout_below="@id/relativeInputArea"/>
+</RelativeLayout>

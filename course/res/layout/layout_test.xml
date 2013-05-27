@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollbars="none" android:background="@drawable/background">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/layout_component">
+            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <LinearLayout style="@style/layout_linear_content">
+                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/layout_component">
+            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <LinearLayout style="@style/layout_linear_content">
+                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/layout_component">
+            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <LinearLayout style="@style/layout_linear_content">
+                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/layout_component">
+            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <LinearLayout style="@style/layout_linear_content">
+                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/layout_component">
+            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <LinearLayout style="@style/layout_linear_content">
+                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/layout_component">
+            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <LinearLayout style="@style/layout_linear_content">
+                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/layout_component">
+            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <LinearLayout style="@style/layout_linear_content">
+                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/layout_component">
+            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <LinearLayout style="@style/layout_linear_content">
+                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

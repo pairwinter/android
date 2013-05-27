@@ -38,6 +38,9 @@ public class MyActivity extends Activity {
 
         Button forwardToCalculator = (Button)findViewById(R.id.forward_to_calculator);
         forwardToCalculator.setOnClickListener(new ForwardCalculatorButtonListener());
+
+        Button forwardToLayoutTest = (Button)findViewById(R.id.forward_to_layout_test);
+        forwardToLayoutTest.setOnClickListener(new ForwardLayoutTestButtonListener());
     }
 
     class ForwardButtonListener implements View.OnClickListener{
@@ -66,6 +69,15 @@ public class MyActivity extends Activity {
             //To change body of implemented methods use File | Settings | File Templates.
             Intent intent = new Intent();
             intent.setClass(MyActivity.this,CalculatorActivity.class);
+            MyActivity.this.startActivity(intent);
+        }
+    }
+    class ForwardLayoutTestButtonListener implements View.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            //To change body of implemented methods use File | Settings | File Templates.
+            Intent intent = new Intent();
+            intent.setClass(MyActivity.this,LayoutTest.class);
             MyActivity.this.startActivity(intent);
         }
     }

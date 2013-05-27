@@ -5,5 +5,6 @@
     <Button android:id="@+id/forward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forward" android:layout_gravity="center" android:layout_column="1" />
     <Button android:id="@+id/forward_to_send_sms" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forward_to_send_msm" />
     <Button android:id="@+id/forward_to_calculator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forward_to_calculator" />
+    <Button android:id="@+id/forward_to_layout_test" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forward_to_layout_test" />
 </LinearLayout>
 

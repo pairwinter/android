@@ -31,10 +31,7 @@ public class Activity2 extends Activity {
         @Override
         public void onClick(View v) {
             //To change body of implemented methods use File | Settings | File Templates.
-            //生成一个Intent 对象
-            Intent intent = new Intent();
-            intent.setClass(Activity2.this,MyActivity.class);
-            Activity2.this.startActivity(intent);
+            Activity2.this.finish();
         }
     }
 }

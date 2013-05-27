@@ -13,4 +13,6 @@
     <string name="forward_to_calculator">Calculator</string>
     <string name="calculator_activity_title">My Calculator</string>
     <string name="calculator_result_activity_title">Calculator Result</string>
+    <string name="forward_to_layout_test">Layout Test</string>
+    <string name="layout_test">Layout Test</string>
 </resources>
