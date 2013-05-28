@@ -8,45 +8,21 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout style="@style/layout_component">
-            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <TextView style="@style/layout_title" android:text="LinearLayout"/>
             <LinearLayout style="@style/layout_linear_content">
-                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+                <include layout="@layout/layout_linear" android:layout_margin="5dip" android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout style="@style/layout_component">
-            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <TextView style="@style/layout_title" android:text="LinearLayout"/>
             <LinearLayout style="@style/layout_linear_content">
-                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+                <include layout="@layout/layout_table" android:layout_margin="5dip" android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout style="@style/layout_component">
-            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
+            <TextView style="@style/layout_title" android:text="GridView"/>
             <LinearLayout style="@style/layout_linear_content">
-                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout style="@style/layout_component">
-            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
-            <LinearLayout style="@style/layout_linear_content">
-                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout style="@style/layout_component">
-            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
-            <LinearLayout style="@style/layout_linear_content">
-                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout style="@style/layout_component">
-            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
-            <LinearLayout style="@style/layout_linear_content">
-                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout style="@style/layout_component">
-            <TextView style="@style/layout_title" android:text="RelativeLayout"/>
-            <LinearLayout style="@style/layout_linear_content">
-                <include layout="@layout/layout_relative" android:layout_margin="5dip" android:layout_gravity="center"/>
+                <include layout="@layout/layout_grid" android:layout_margin="5dip" android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

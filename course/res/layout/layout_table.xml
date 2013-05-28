@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:stretchColumns="1" android:padding="5dp">
+    <TableRow>
+        <TextView android:layout_span="3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="android:layout_column=‘N’表示跳过N列！" android:textColor="@color/red" android:gravity="center"/>
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_column="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="第二列（跳过第一列）" android:textColor="@android:color/holo_blue_bright"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="Crtl-0" android:textColor="@android:color/holo_blue_bright"/>
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_column="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="第二列（跳过第一列）" android:textColor="@android:color/holo_blue_bright"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="Ctrl-S" android:textColor="@android:color/holo_blue_bright"/>
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_column="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="第二列（跳过第一列）" android:textColor="@android:color/holo_blue_bright"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="Ctrl-Shift-S" android:textColor="@android:color/holo_blue_bright"/>
+    </TableRow>
+    <View android:layout_height="2dip" android:layout_width="fill_parent" android:background="@color/white"/>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="第一列" android:padding="5dp" android:textColor="@android:color/holo_blue_bright"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="第二列" android:textColor="@android:color/holo_blue_bright"/>
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="第一列" android:padding="5dp" android:textColor="@android:color/holo_blue_bright"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="第二列" android:textColor="@android:color/holo_blue_bright"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="第三列" android:textColor="@android:color/holo_blue_bright"/>
+    </TableRow>
+    <View android:layout_height="2dip" android:layout_width="fill_parent" android:background="@color/white"/>
+    <TableRow>
+        <TextView android:layout_column="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="第二列（跳过第一列）" android:textColor="@android:color/holo_blue_bright"/>
+    </TableRow>
+</TableLayout>
