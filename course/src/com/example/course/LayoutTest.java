@@ -1,10 +1,12 @@
 package com.example.course;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
+import com.example.course.tool.ToastTool;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,14 +21,19 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class LayoutTest extends Activity{
-    private Toast toast;
+    private Map<Integer,String> checkboxs = new HashMap<Integer, String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
         setContentView(R.layout.layout_test);
-        GridView gridView = (GridView)findViewById(R.id.layout_test_grid);
+        processGridView((GridView) findViewById(R.id.layout_test_gridview));
+        processCheckbox();
+        processRadioGroup();
+    }
+
+    private void processGridView(GridView gridView){
         List<Map<String,Object>> gridData = new ArrayList<Map<String, Object>>();
-        for (int i=1;i<=10;i++){
+        for (int i=1;i<=3;i++){
             Map<String,Object> rowMap = new HashMap<String, Object>();
             int icon = 0;
             switch (i){
@@ -40,39 +47,103 @@ public class LayoutTest extends Activity{
                 case 8:icon = R.drawable.grid_item_icon8;break;
                 case 9:icon = R.drawable.grid_item_icon9;break;
                 case 10:icon = R.drawable.grid_item_icon10;break;
-
+                default:break;
             }
             rowMap.put("layout_grid_item_imageview",icon);
             rowMap.put("layout_grid_item_textview",i+"");
             gridData.add(rowMap);
         }
-        SimpleAdapter simpleAdapter = new SimpleAdapter(this,gridData,R.layout.layout_grid_item,new String[]{"layout_grid_item_imageview","layout_grid_item_textview"},new int[]{R.id.layout_grid_item_imageview,R.id.layout_grid_item_textview});
+        SimpleAdapter simpleAdapter = new SimpleAdapter(this,gridData,R.layout.layout_gridview_item,new String[]{"layout_grid_item_imageview","layout_grid_item_textview"},new int[]{R.id.layout_grid_item_imageview,R.id.layout_grid_item_textview});
         gridView.setAdapter(simpleAdapter);
         gridView.setOnItemClickListener(new GridItemClickListener());
-        Log.d("Damon's Log",gridView.getMeasuredHeight()+"");
-        gridView.setMinimumHeight(gridView.getMeasuredHeight());
+    }
+
+    private void processCheckbox(){
+        CheckBox checkBox1 = (CheckBox)findViewById(R.id.widgets_test_checkbox1);
+        CheckBox checkBox2 = (CheckBox)findViewById(R.id.widgets_test_checkbox2);
+        CheckBox checkBox3 = (CheckBox)findViewById(R.id.widgets_test_checkbox3);
+        checkBox1.setOnCheckedChangeListener(new OnCheckBoxChangeListener());
+        checkBox2.setOnCheckedChangeListener(new OnCheckBoxChangeListener());
+        checkBox3.setOnCheckedChangeListener(new OnCheckBoxChangeListener());
+    }
+
+    /**
+     * process RadioGroup
+     */
+    private void processRadioGroup(){
+        RadioGroup radioGroup = (RadioGroup)findViewById(R.id.widgets_test_radiogroup);
+        radioGroup.setOnCheckedChangeListener(new OnRadioGroupChangeListener());
+    }
+
+    /**
+     * GridView click listener
+     */
+    class GridItemClickListener implements AdapterView.OnItemClickListener{
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            ToastTool.showToast(getApplicationContext(),"You have pressed "+(position + 1));
+        }
+    }
+
+    /**
+     * Checkbox change listener
+     */
+    class OnCheckBoxChangeListener implements CompoundButton.OnCheckedChangeListener{
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            //To change body of implemented methods use File | Settings | File Templates.
+            if(isChecked){
+                String selected="",tips = "";
+                if(!checkboxs.containsKey(buttonView.getId())){
+                    checkboxs.put(buttonView.getId(),buttonView.getText().toString());
+                }
+                for(Integer key : checkboxs.keySet()){
+                    tips+=checkboxs.get(key)+" ";
+                }
+                if(buttonView.getId() == R.id.widgets_test_checkbox1){
+                    selected = "You selected CheckBox 1";
+                }else if(buttonView.getId() == R.id.widgets_test_checkbox2){
+                    selected = "You selected CheckBox 2";
+                }else if(buttonView.getId() == R.id.widgets_test_checkbox3){
+                    selected = "You selected CheckBox 3";
+                }
+                if(tips.length()>0){
+                    selected = selected + "\n" +tips;
+                }
+                ToastTool.showToast(getApplicationContext(),selected);
+            }else{
+                checkboxs.remove(buttonView.getId());
+                String tips = "";
+                for(Integer key : checkboxs.keySet()){
+                    tips+=checkboxs.get(key)+" ";
+                }
+                if(tips.length()>0){
+                    ToastTool.showToast(getApplicationContext(),tips);
+                }
+            }
+        }
+    }
+
+    class OnRadioGroupChangeListener implements RadioGroup.OnCheckedChangeListener{
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            //To change body of implemented methods use File | Settings | File Templates.
+            if(checkedId == R.id.widgets_test_radio1){
+                ToastTool.showToast(getApplicationContext(),"You selected Radio "+ "1");
+            }else if(checkedId == R.id.widgets_test_radio2){
+                ToastTool.showToast(getApplicationContext(),"You selected Radio "+ "2");
+            }else if(checkedId == R.id.widgets_test_radio3){
+                ToastTool.showToast(getApplicationContext(),"You selected Radio "+ "3");
+            }
+        }
     }
 
     @Override
     protected void onDestroy() {
-        if(toast!=null){
-            toast.cancel();
-        }
+        ToastTool.cancelToast();
         super.onDestroy();    //To change body of overridden methods use File | Settings | File Templates.
         Log.d("Damon's Log","=============destroy============");
     }
 
-    class GridItemClickListener implements AdapterView.OnItemClickListener{
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            if(toast!=null){
-                toast.cancel();
-                toast.setText("You have pressed "+(position + 1));
-                toast.show();
-            }else{
-                toast = Toast.makeText(getApplicationContext(),"You have pressed "+(position + 1),0);
-                toast.show();
-            }
-        }
-    }
+
 }

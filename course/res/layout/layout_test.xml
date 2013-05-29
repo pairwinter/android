@@ -14,15 +14,22 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout style="@style/layout_component">
-            <TextView style="@style/layout_title" android:text="LinearLayout"/>
+            <TextView style="@style/layout_title" android:text="TableLayout"/>
             <LinearLayout style="@style/layout_linear_content">
                 <include layout="@layout/layout_table" android:layout_margin="5dip" android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout style="@style/layout_component">
-            <TextView style="@style/layout_title" android:text="GridView"/>
+            <TextView style="@style/layout_title" android:text="GridLayout And GridView"/>
             <LinearLayout style="@style/layout_linear_content">
-                <include layout="@layout/layout_grid" android:layout_margin="5dip" android:layout_gravity="center"/>
+                <!--<include layout="@layout/layout_grid" android:layout_margin="5dip" android:layout_gravity="center"/>-->
+                <include layout="@layout/layout_gridview" android:layout_margin="5dip" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout style="@style/layout_component">
+            <TextView style="@style/layout_title" android:text="Widgets Test"/>
+            <LinearLayout style="@style/layout_linear_content">
+                <include layout="@layout/widgets_test" android:layout_margin="5dip" android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
