@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollbars="none" android:background="@drawable/background">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollbars="none" android:background="@drawable/backgrond_gradient">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
         <LinearLayout style="@style/layout_component">
             <TextView style="@style/layout_title" android:text="RelativeLayout"/>
@@ -22,7 +22,11 @@
         <LinearLayout style="@style/layout_component">
             <TextView style="@style/layout_title" android:text="GridLayout And GridView"/>
             <LinearLayout style="@style/layout_linear_content">
-                <!--<include layout="@layout/layout_grid" android:layout_margin="5dip" android:layout_gravity="center"/>-->
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/style_corners" android:layout_marginBottom="5dip">
+                    <TextView android:text="GridLayout is a new Layout in Android 4.0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/tomato"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/tomato"
+                              android:text="&lt;include layout='@layout/layout_grid' android:layout_margin='5dip' android:layout_gravity='center'/&gt;" />
+                </LinearLayout>
                 <include layout="@layout/layout_gridview" android:layout_margin="5dip" android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>

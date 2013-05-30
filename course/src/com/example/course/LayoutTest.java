@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.*;
 import com.example.course.tool.ToastTool;
@@ -22,6 +23,7 @@ import java.util.Map;
  */
 public class LayoutTest extends Activity{
     private Map<Integer,String> checkboxs = new HashMap<Integer, String>();
+    private Map<Integer,ImageView> imageViews = new HashMap<Integer, ImageView>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
@@ -29,6 +31,9 @@ public class LayoutTest extends Activity{
         processGridView((GridView) findViewById(R.id.layout_test_gridview));
         processCheckbox();
         processRadioGroup();
+        processToggleButton();
+        processImageButton();
+        processImageView();
     }
 
     private void processGridView(GridView gridView){
@@ -73,6 +78,35 @@ public class LayoutTest extends Activity{
     private void processRadioGroup(){
         RadioGroup radioGroup = (RadioGroup)findViewById(R.id.widgets_test_radiogroup);
         radioGroup.setOnCheckedChangeListener(new OnRadioGroupChangeListener());
+    }
+
+    /**
+     * process ToggleButton
+     */
+    private void processToggleButton(){
+        ToggleButton toggleButton = (ToggleButton)findViewById(R.id.widgets_test_toggleButton);
+        toggleButton.setOnCheckedChangeListener(new OnToggleButtonChangeListener());
+    }
+
+    /**
+     * process ImageButton change backgound resurces while click
+     */
+    private void processImageButton(){
+        ImageButton imageButton = (ImageButton)findViewById(R.id.widgets_test_imageButton2);
+        imageButton.setOnTouchListener(new OnTouchImageButtonListener());
+    }
+
+    /**
+     * process ImageView,add click listener
+     */
+    private void processImageView(){
+        ImageView imageViewPrevious = (ImageView)findViewById(R.id.widgets_test_imageview_previous);
+        ImageView imageViewNext = (ImageView)findViewById(R.id.widgets_test_imageview_next);
+        imageViews.put(R.id.widgets_test_imageview_previous,imageViewPrevious);
+        imageViews.put(R.id.widgets_test_imageview_next,imageViewNext);
+        imageViewPrevious.setOnClickListener(new OnImageViewClickListener());
+        imageViewNext.setOnClickListener(new OnImageViewClickListener());
+
     }
 
     /**
@@ -134,6 +168,55 @@ public class LayoutTest extends Activity{
                 ToastTool.showToast(getApplicationContext(),"You selected Radio "+ "2");
             }else if(checkedId == R.id.widgets_test_radio3){
                 ToastTool.showToast(getApplicationContext(),"You selected Radio "+ "3");
+            }
+        }
+    }
+
+    class OnToggleButtonChangeListener implements CompoundButton.OnCheckedChangeListener{
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            //To change body of implemented methods use File | Settings | File Templates.
+            ToastTool.showToast(getApplicationContext(),isChecked?"Open":"Close");
+        }
+    }
+
+    class OnTouchImageButtonListener implements View.OnTouchListener{
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            ImageButton imageButton = (ImageButton)v;
+            if(event.getAction() == MotionEvent.ACTION_DOWN){
+                imageButton.setImageResource(R.drawable.star_2);
+            }else if(event.getAction() == MotionEvent.ACTION_UP){
+                Integer tag = (Integer)imageButton.getTag();
+                if(tag==null){
+                    imageButton.setTag(R.drawable.star);
+                    imageButton.setImageResource(R.drawable.star);
+                }else{
+                    if(tag == R.drawable.star){
+                        imageButton.setImageResource(R.drawable.star_3);
+                        imageButton.setTag(R.drawable.star_3);
+                    }else{
+                        imageButton.setImageResource(R.drawable.star);
+                        imageButton.setTag(R.drawable.star);
+                    }
+                }
+            }
+            return false;  //To change body of implemented methods use File | Settings | File Templates.
+        }
+    }
+
+    class OnImageViewClickListener implements View.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            //To change body of implemented methods use File | Settings | File Templates.
+            for(Integer key : imageViews.keySet()){
+                ImageView imageView = imageViews.get(key);
+                if(key!=v.getId()){
+//                    imageView.setImageAlpha(100);
+                    imageView.setAlpha(100);
+                }else{
+                    imageView.setAlpha(255);
+                }
             }
         }
     }

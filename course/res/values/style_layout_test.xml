@@ -4,7 +4,7 @@
         <item name="android:orientation">vertical</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">5dip</item>
+        <item name="android:layout_margin">5dip</item>
         <!--<item name="android:background">@drawable/style_corners</item>-->
         <item name="android:radius">5dip</item>
     </style>
@@ -23,6 +23,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">2dip</item>
         <!--<item name="android:background">@color/darksalmon</item>-->
+    </style>
+    <style name="layout_linear_subcontent">
+        <item name="android:layout_margin">5dip</item>
     </style>
     <style name="layout_grid_textview">
         <item name="android:layout_width">fill_parent</item>

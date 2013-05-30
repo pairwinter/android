@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+    <!--Checkbox-->
+    <LinearLayout style="@style/layout_linear_subcontent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
         <CheckBox android:id="@+id/widgets_test_checkbox1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select 1" />
         <CheckBox android:id="@+id/widgets_test_checkbox2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select 2"/>
         <CheckBox android:id="@+id/widgets_test_checkbox3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select 3"/>
     </LinearLayout>
-    <RadioGroup android:id="@+id/widgets_test_radiogroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-        <RadioButton android:id="@+id/widgets_test_radio1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select 1"/>
-        <RadioButton android:id="@+id/widgets_test_radio2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select 2"/>
-        <RadioButton android:id="@+id/widgets_test_radio3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select 3"/>
-    </RadioGroup>
+
+    <!--RadioGroup And RadioButton-->
+    <LinearLayout style="@style/layout_linear_subcontent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <RadioGroup android:id="@+id/widgets_test_radiogroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/widgets_test_radio1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select 1"/>
+            <RadioButton android:id="@+id/widgets_test_radio2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select 2"/>
+            <RadioButton android:id="@+id/widgets_test_radio3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select 3"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <!--Switch-->
+    <LinearLayout style="@style/layout_linear_subcontent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/style_corners">
+        <TextView android:text="Switch is a new widget in Android 4.0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/tomato"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/tomato"
+                android:text="&lt;Switch android:layout_width='wrap_content' android:layout_height='wrap_content' android:textOn='On' android:textOff='Off'/&gt;" />;
+    </LinearLayout>
+
+    <!--ToggleButton-->
+    <LinearLayout style="@style/layout_linear_subcontent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/style_corners">
+        <ToggleButton android:id="@+id/widgets_test_toggleButton" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:textOn="Open" android:textOff="Close"/>
+    </LinearLayout>
+
+    <!--ImageButton-->
+    <LinearLayout style="@style/layout_linear_subcontent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/style_corners">
+        <ImageButton android:id="@+id/widgets_test_imageButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/image_button_background" android:background="@android:color/transparent"/>
+        <ImageButton android:id="@+id/widgets_test_imageButton2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/star_3" android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!--ImageView-->
+    <LinearLayout style="@style/layout_linear_subcontent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/style_corners">
+        <ImageView android:id="@+id/widgets_test_imageview_previous" android:adjustViewBounds="true" android:maxHeight="100dp" android:maxWidth="100dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_previous" android:layout_gravity="center"/>
+        <ImageView android:id="@+id/widgets_test_imageview_next" android:adjustViewBounds="true" android:maxHeight="100dp" android:maxWidth="100dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_next" android:layout_gravity="center"/>
+    </LinearLayout>
+
 </LinearLayout>
