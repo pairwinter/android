@@ -9,7 +9,6 @@ target/
 *.jar
 *.war
 *.ear
-.idea/
 node_modules/
 *.iml
 version.properties
