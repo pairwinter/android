@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ranqk.damon.explore_java_android">
+    package="com.damon.diamond">
 
     <application
         android:allowBackup="true"
